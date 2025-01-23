@@ -13,4 +13,6 @@ const (
 	ErrPasswordHashUnknownAlgorithm Error = "unknown algorithm"
 	ErrPasswordHashMismatch         Error = "mismatched hash and password"
 	ErrEmailAddressInvalid          Error = "invalid email address"
+	ErrTokenSecretRequired          Error = "token secret required"
+	ErrTokenInvalid                 Error = "invalid token"
 )
