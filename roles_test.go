@@ -177,3 +177,21 @@ func Test_that_DeleteRole_works(t *testing.T) {
 	err = DeleteRole(ctx, client, r)
 	require.NoError(t, err)
 }
+
+func Test_that_RoleExists_returns_true_for_existing_role(t *testing.T) {
+	client := setupAndMigrate(t)
+	ctx := context.Background()
+	_, err := CreateRole(ctx, client, "test_role", "Test Role")
+	require.NoError(t, err)
+	exists, err := RoleExists(ctx, client, "test_role")
+	require.NoError(t, err)
+	require.True(t, exists)
+}
+
+func Test_that_RoleExists_returns_false_for_missing_role(t *testing.T) {
+	client := setupAndMigrate(t)
+	ctx := context.Background()
+	exists, err := RoleExists(ctx, client, "test_role")
+	require.NoError(t, err)
+	require.False(t, exists)
+}
