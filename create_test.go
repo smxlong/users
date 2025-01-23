@@ -11,7 +11,6 @@ import (
 
 var testRolesAndPermissions = Roles{
 	"admin": &RoleWithPermissions{
-		Name:        "admin",
 		Description: "Admin role",
 		Permissions: []*Permission{
 			{
@@ -21,7 +20,6 @@ var testRolesAndPermissions = Roles{
 		},
 	},
 	"user": &RoleWithPermissions{
-		Name:        "user",
 		Description: "User role",
 		Permissions: []*Permission{
 			{
@@ -34,7 +32,6 @@ var testRolesAndPermissions = Roles{
 
 var testMoreRolesAndPermissions = Roles{
 	"admin": &RoleWithPermissions{
-		Name:        "admin",
 		Description: "Admin role",
 		Permissions: []*Permission{
 			{
@@ -44,7 +41,6 @@ var testMoreRolesAndPermissions = Roles{
 		},
 	},
 	"user": &RoleWithPermissions{
-		Name:        "user",
 		Description: "User role",
 		Permissions: []*Permission{
 			{
@@ -54,7 +50,6 @@ var testMoreRolesAndPermissions = Roles{
 		},
 	},
 	"x": &RoleWithPermissions{
-		Name:        "x",
 		Description: "X role",
 		Permissions: []*Permission{
 			{
@@ -100,7 +95,6 @@ func Test_that_CreateRolesAndPermissions_fails_with_mismatched_permission_descri
 	ctx := context.Background()
 	testRolesAndPermissions := Roles{
 		"admin": &RoleWithPermissions{
-			Name:        "admin",
 			Description: "Admin role",
 			Permissions: []*Permission{
 				{
@@ -110,7 +104,6 @@ func Test_that_CreateRolesAndPermissions_fails_with_mismatched_permission_descri
 			},
 		},
 		"user": &RoleWithPermissions{
-			Name:        "user",
 			Description: "User role",
 			Permissions: []*Permission{
 				{

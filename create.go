@@ -13,7 +13,6 @@ type Roles map[string]*RoleWithPermissions
 
 // RoleWithPermissions represents a role and its permissions.
 type RoleWithPermissions struct {
-	Name        string
 	Description string
 	Permissions []*Permission
 }
